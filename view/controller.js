@@ -1,5 +1,5 @@
 
-import * as model  from '../model/script.js';
+import * as model  from './model.js';
 import * as view from './script.js'
 
 // ***** A dummy standin for the actual model *****
