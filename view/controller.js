@@ -27,14 +27,15 @@ export function generateAndDisplayRandomBall() {
 
 export function fireCannonBall(index) {
     const cannonBallImgSrc = document.querySelector("#cannon .ball img").src;
-    const foundCannonBall = "🟡";
-    if(cannonBallImgSrc === "red-ball.png") {
+    console.log(cannonBallImgSrc);
+    let foundCannonBall = "🟡"; // Use let instead of const to allow reassignment
+    if(cannonBallImgSrc.includes("red-ball.png")) {
         foundCannonBall = "🔴";
-    } else if(cannonBallImgSrc === "blue-ball.png") {
+    } else if(cannonBallImgSrc.includes("blue-ball.png")) {
         foundCannonBall = "🔵";
-    } else if(cannonBallImgSrc === "yellow-ball.png") {
+    } else if(cannonBallImgSrc.includes("yellow-ball.png")) {
         foundCannonBall = "🟡";
-    } else if(cannonBallImgSrc === "green-ball.png") {
+    } else if(cannonBallImgSrc.includes("green-ball.png")) {
         foundCannonBall = "🟢";
     }
     view.insertNewBallAfter(index, foundCannonBall);
